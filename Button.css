@@ -1,0 +1,108 @@
+
+/* ARC ICON FOR MENUBUTTON */
+#PanelUI-menu-button {
+  list-style-image: url('https://raw.githubusercontent.com/neurokitti/Arc_Zen_Theme/6da4c1ca78cc521bea1026ff024fcc8528ae6a49/icons/arc-logo.svg') !important;
+  scale: 1;
+}
+
+
+/*获取最大化、最小化、关闭的基础图标*/
+.tab-icon-image[src="chrome://branding/content/icon32.png"], .tab-icon-image[src="chrome://browser/skin/privatebrowsing/favicon.svg"] {
+  content: url('https://raw.githubusercontent.com/tabler/tabler-icons/01eb08a9bc8075f5bd6828ac30b0a3a038a9ef46/icons/filled/circle.svg') !important;
+}
+
+/*格式化*/
+.titlebar-button > .toolbarbutton-icon {
+    list-style-image: none;
+    border-radius: 10px;
+    transition: 0.2s ease;
+  }
+
+ tab-group:has(tab[hidden]){
+  display: none !important;
+} 
+
+/* 窗口控制按钮基础样式 */
+.titlebar-button {
+  background: none !important;
+  padding: 8px 8px !important;
+  transition: 0.2s ease;
+}
+
+/* 基础图标样式 */
+.titlebar-button > .toolbarbutton-icon {
+  border-radius: 10px !important;
+  transition: 0.2s ease !important;
+  opacity: 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+
+/* 最大化状态下的图标 */
+.titlebar-max > .toolbarbutton-icon {
+  background: #3aea4994 !important;
+  border: 1px solid #3aea4994 !important;
+}
+.titlebar-restore > .toolbarbutton-icon {
+  background: #3aea4994 !important;
+  border: 1px solid #3aea4994 !important;
+}
+
+/* 最小化按钮样式 */
+.titlebar-min > .toolbarbutton-icon {
+  background: #fac53794 !important;
+  border: 1px solid #fac537 !important;
+}
+
+/* 关闭按钮样式 */
+.titlebar-close > .toolbarbutton-icon {
+  background: #f34f5694 !important;
+  border: 1px solid #f34f56 !important;
+}
+
+/* 悬停效果 */
+.titlebar-max:hover > .toolbarbutton-icon {
+  background: none !important;
+  border: 1px solid #3aea49 !important;
+}
+
+.titlebar-min:hover > .toolbarbutton-icon {
+  background: none !important;
+  border: 1px solid #fac537 !important;
+}
+
+.titlebar-close:hover > .toolbarbutton-icon {
+  background: none !important;
+  border: 1px solid #f34f56 !important;
+}
+
+.titlebar-max:hover > .toolbarbutton-icon {
+  background: none !important;
+  border: 1px solid #3aea4994 !important;
+}
+.titlebar-restore:hover > .toolbarbutton-icon {
+  background: none !important;
+  border: 1px solid #3aea4994 !important;
+}
+
+/*修改偏好设置的图标*/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --icon-brightness: 0 !important; /* Adjust for light mode */
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --icon-brightness: 1 !important; /* Adjust for dark mode */
+  }
+}
+
+/* Custom icon and styling for main menu button */
+#PanelUI-menu-button {
+  list-style-image: url("https://raw.githubusercontent.com/neurokitti/Arc_Zen_Theme/6da4c1ca78cc521bea1026ff024fcc8528ae6a49/icons/arc-logo.svg") !important;
+  scale: 1.1;
+  filter: brightness(var(--icon-brightness)) grayscale(10%) contrast(30%); !important;
+}
